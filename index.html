@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>JS5 - hometask</title>
+
+	<style>
+		.fine-list {
+			font-family: 'Arial', sans-serif;
+			color: #fff;
+			font-weight: 700;
+			font-size: 16px;
+			margin: 200px 550px;
+			background-color: #000000;
+			border-radius: 10px;
+			padding: 10px 30px;
+			cursor: pointer;
+		}
+		.fine-list:hover {
+			background-color: #fff;
+			color: #000;
+
+		}
+	</style>
+
+
+</head>
+<body>
+<script>
+	;(function(){
+	    "use strict";
+    var playList = [
+        {
+            author: "LED ZEPPELIN",
+            song:"STAIRWAY TO HEAVEN"
+        },
+        {
+            author: "QUEEN",
+            song:"BOHEMIAN RHAPSODY"
+        },
+        {
+            author: "LYNYRD SKYNYRD",
+            song:"FREE BIRD"
+        },
+        {
+            author: "DEEP PURPLE",
+            song:"SMOKE ON THE WATER"
+        },
+        {
+            author: "JIMI HENDRIX",
+            song:"ALL ALONG THE WATCHTOWER"
+        },
+        {
+            author: "AC/DC",
+            song:"BACK IN BLACK"
+        },
+        {
+            author: "QUEEN",
+            song:"WE WILL ROCK YOU"
+        },
+        {
+            author: "METALLICA",
+            song:"ENTER SANDMAN"
+        }
+    ];
+
+    function printPlayList(list) {
+
+        var listStr = '<ol class="fine-list">';
+
+        for (var key = 0; key < list.length; key++) {
+            listStr += '<li>' + list[key].author + '</li>';
+//            document.write(list[key].author + '<br>');
+		}
+		listStr += '</ol>';
+
+        document.write(listStr);
+	}
+
+	printPlayList(playList);
+	})();
+</script>
+</body>
+</html>
